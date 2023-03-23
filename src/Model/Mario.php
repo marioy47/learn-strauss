@@ -1,9 +1,9 @@
-<?php
+<?php // src/Model/Mario.php
 
 namespace MyNamespace\Model;
 
-use splitbrain\phpcli\CLI;
-use splitbrain\phpcli\Options;
+use MyNamespace\splitbrain\phpcli\CLI;
+use MyNamespace\splitbrain\phpcli\Options;
 
 class Mario extends CLI
 {
