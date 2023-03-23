@@ -1,0 +1,25 @@
+{
+    "name": "marioy47/learn-strauss",
+    "description": "A test of composer with strauss",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "MyNamespace\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Mario Yepes",
+            "email": "marioy47@gmail.com"
+        }
+    ],
+    "require": {
+        "splitbrain/php-cli": "^1.2"
+    },
+    "scripts": {
+        "speak": [
+            "@php public/index.php"
+        ]
+    }
+}

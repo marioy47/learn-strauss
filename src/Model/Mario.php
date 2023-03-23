@@ -1,16 +1,19 @@
 <?php
 
-namespace App\Model;
+namespace MyNamespace\Model;
 
-class Mario
+use splitbrain\phpcli\CLI;
+use splitbrain\phpcli\Options;
+
+class Mario extends CLI
 {
-    public function __construct()
+    public function setup(Options $options)
     {
-        echo 'Constructor called';
+        $options->setHelp('A test for strauss');
     }
 
-    public function out()
+    public function main(Options $options ): void
     {
-        echo 'Calling out';
+        echo $options->help();
     }
 }

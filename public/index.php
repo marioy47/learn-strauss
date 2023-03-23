@@ -2,8 +2,8 @@
 
 require 'vendor/autoload.php';
 
-use App\Model\Mario;
+use MyNamespace\Model\Mario;
 
 $marioModel = new Mario();
 
-$marioModel->out();
+$marioModel->run();
