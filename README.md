@@ -1,4 +1,6 @@
-# Learning about Strauss
+# Learning Strauss
+
+This are just personal instructions on how to work with Strauss <https://github.com/BrianHenryIE/strauss> and what it changes when working with it.
 
 ## Create the project
 
@@ -7,6 +9,8 @@
 - Create the `public/index.php` file that uses it
 
 ```bash
+mkdir learning-strauss
+cd $_
 composer init
 ```
 
@@ -107,6 +111,7 @@ $marioModel->run();
 - Test that it works:
 
 ```bash
+composer dump-autoload
 composer speak
 ```
 
