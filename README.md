@@ -4,9 +4,9 @@ This are just personal instructions on how to work with Strauss <https://github.
 
 ## Create the project
 
-- The namespace is `MyNamespace`
-- Create a model class
-- Create the `public/index.php` file that uses it
+- I'll be using the namespace `MyNamespace`
+- Create a model class in `src/Model/Mario.php`
+- Create a file in `public/index.php` file that uses that class
 
 ```bash
 mkdir learning-strauss
@@ -14,7 +14,9 @@ cd $_
 composer init
 ```
 
-```bash
+- Set the `PSR-4` class path.
+
+```bash {8}
 {
     "name": "marioy47/learn-strauss",
     "description": "A test of composer with strauss",
@@ -37,11 +39,13 @@ composer init
 
 ## Creating the working files
 
+- Include an external library for testing
+
 ```bash
 composer require splitbrain/php-cli
 ```
 
-- A class to autload
+- Use some classes of the package in the `Mario` class
 
 ```php
 <?php // src/Model;
@@ -65,7 +69,7 @@ class Mario extends CLI
 }
 ```
 
-- A script that uses that class
+- A script that uses the `Mario` class
 
 ```php
 <?php // public/index.php
@@ -79,10 +83,9 @@ $marioModel = new Mario();
 $marioModel->run();
 ```
 
-- Configure classmap
 - Create a script for easier execution
 
-```json {8,18,20-22}
+```json {20-22}
 {
   "name": "marioy47/learn-strauss",
   "description": "A test of composer with strauss",
@@ -116,6 +119,8 @@ composer speak
 ```
 
 ## Adding strauss
+
+- Only showing the changes on the Json file
 
 ```json
 {
@@ -155,7 +160,7 @@ composer speak
 }
 ```
 
-- Move the files to `vendor-prefix`
+- Use strauss to move the files to `vendor-prefix` and change the classname
 
 ```bash
 composer strauss
@@ -218,4 +223,5 @@ head vendor-prefixed/splitbrain/php-cli/src/CLI.php
 
 ## Resources
 
+- <https://github.com/BrianHenryIE/strauss>
 - <https://github.com/stellarwp/global-docs/blob/main/docs/strauss-setup.md>
